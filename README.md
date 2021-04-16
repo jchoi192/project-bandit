@@ -9,8 +9,11 @@ A blogging and social network app that allows users to anonymously post messages
 - Mongoose
 
 ## Wireframes
-![wireframe](./images/Project-Bandit-wireframe.png)
-(./images/Project-Bandit-wireframe-2.png)
+![wireframe](./imgs/Project-Bandit-wireframe.png)
+![wireframe](./imgs/Project-Bandit-wireframe-2.png)
+
+## Getting Started
+[Click Here](https://github.com/jchoi192/project-bandit) to get started
 
 ## Future Enhancements
 - Allow users to signup/login to an account
