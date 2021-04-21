@@ -1,4 +1,3 @@
-const { urlencoded } = require('express');
 const express = require('express');
 const morgan = require('morgan');
 const port = 3000;
@@ -12,7 +11,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.use(morgan('dev'));
-app.use(urlencoded( {extended: false} ));
+app.use(express.urlencoded( {extended: false} ));
 app.use(express.static('public'));
 
 app.use('/', indexRouter)

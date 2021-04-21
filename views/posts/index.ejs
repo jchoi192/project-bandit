@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<h1>This is where users can post things</h1>
+<!-- need to mad materialize framework for css -->
+<div class="card purple">
+    <div class="card-content white-text">
+        <form action="/posts" method="POST">
+            <textarea name="text" placeholder="Type something here"></textarea>
+       
+          <button type="sumbit">Submit</button>
+        </form>
+    </div>
+    <ul>
+    <% posts.forEach( (post) => { %>
+        <li>
+            <%= post.text %>     
+            <!-- <button> :trash: </button>
+                <button>:recycle:</button>
+                <button>:bandit_mask:</button> -->
+            <a href=""><button> :trash: </button></a>
+            <a href=""><button>:recycle:</button></a>
+        </li>
+    <% }) %>
+    </ul>
+</div>
+
+
+<%- include('../partials/footer') %>
