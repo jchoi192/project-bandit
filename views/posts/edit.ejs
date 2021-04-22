@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+
+<div class="card-content white-text">
+    <form action="/posts/<%= postId %>?_method=PUT" method="POST" >
+        <textarea name="text" placeholder="<%= post.text %>"></textarea>
+      <button type="sumbit">Submit</button>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>

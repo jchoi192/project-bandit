@@ -13,12 +13,12 @@
     <ul>
     <% posts.forEach( (post) => { %>
         <li>
-            <%= post.text %>     
-            <!-- <button> :trash: </button>
-                <button>:recycle:</button>
-                <button>:bandit_mask:</button> -->
-            <a href=""><button> :trash: </button></a>
-            <a href=""><button>:recycle:</button></a>
+            <%= post.text %> 
+            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                <button>DELETE 🗑</button>
+        </form>    
+        
+            <a href="/posts/<%= post._id %>/edit"><button>UPDATE</button></a>
         </li>
     <% }) %>
     </ul>
