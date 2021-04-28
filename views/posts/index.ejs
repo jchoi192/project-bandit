@@ -1,48 +1,63 @@
 <%- include('../partials/header') %>
 
-<div class="row">
+<div class="row container">
     <div id="leftBody" class="col s2">
         <div class="container">
-        <div class="navbar-fixed">
-            <!-- <img id="logo" src="/imgs/bandit-icon.png" alt="LOGO"> -->
-            <!-- <a href="/heart"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" alt=""></a> -->
+            <div class="navbar-fixed">
+                <!-- <img id="logo" src="/imgs/bandit-icon.png" alt="LOGO"> -->
+                <!-- <a href="/heart"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" alt=""></a> -->
 
-            <a class="asideBtn left" href="/posts"><i class="small material-icons">accessibility</i>Home</a>
-            <a class="asideBtn left" href="/explore"><i class="small material-icons">explore</i>Explore</a>
-            <a class="asideBtn left" href="/notifications"><i class="small material-icons">notifications_none</i>Notifications</a>
-            <a class="asideBtn left" href="/messages"><i class="small material-icons">message</i>Messages</a>
-            <a class="asideBtn left" href="/profile"><i class="small material-icons">accessibility</i>Profile</a>
-            <a class="asideBtn left" href="/bookmarks"><i class="small material-icons">bookmark_border</i>Bookmarks</a>
-            <a class="asideBtn left" href="/more"><i class="small material-icons">more</i>More</a>
+                <a class="asideBtn left" href="/posts"><i class="small material-icons">home</i></a>
+                <a class="asideBtn left" href="/explore"><i class="small material-icons">explore</i></a>
+                <a class="asideBtn left" href="/notifications"><i
+                        class="small material-icons">notifications_none</i></a>
+                <a class="asideBtn left" href="/messages"><i class="small material-icons">message</i></a>
+                <a class="asideBtn left" href="/profile"><i class="small material-icons">account_circle</i></a>
+                <a class="asideBtn left" href="/bookmarks"><i class="small material-icons">bookmark_border</i></a>
+                <a class="asideBtn left" href="/more"><i class="small material-icons">more</i></a>
+            </div>
         </div>
-    </div>
     </div>
 
     <div class="col s6">
-        <div class="centerBody">
-            <form action="/posts" method="POST">
-                <h2>Home</h2>
-                <textarea name="text" placeholder="What's Happening"></textarea>
-                <button type="sumbit">POST</button>
-            </form>
+        <div class="textareaBody">
+                <form action="/posts" method="POST">
+                    <h5 id="homeHeader"><strong>Home</strong></h5>
+                    <textarea name="text" placeholder="What's Happening"></textarea>
+                    <a class="asideBtn left" href="/image"><i class="small material-icons">image</i></a>
+                    <a class="asideBtn left" href="/gif"><i class="small material-icons">gif</i></a>
+                    <a class="asideBtn left" href="/chart"><i class="small material-icons">insert_chart</i></a>
+                    <button class="right waves-effect waves-light blue lighten-2 btn" type="sumbit">Tweet</button>
+                </form><br><br>
         </div>
         <ul>
             <% posts.forEach( (post) => { %>
             <li>
-                <%= post.text %>
-                <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-                    <button class="left waves-effect waves-grey btn-flat">
-                        <i class="small material-icons">delete</i>
-                    </button>
-                </form>
-                <a id="updateBtn" class="center" href="/posts/<%= post._id %>/edit">
+                <div>
+                    <p>
+                        THIS IS WHERE A USER'S PHOTO WILL GO
+                    </p>
+                </div>
+                <div id="userPost">
+                    <span>
+                        <%= post.text %>
+                    </span>
+                </div>
+                <div>
+                    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                        <button class="left waves-effect waves-grey btn-flat">
+                            <i class="small material-icons">delete</i>
+                        </button>
+                    </form>
+                    <a id="updateBtn" class="center" href="/posts/<%= post._id %>/edit">
+                        <button class="waves-effect waves-grey btn-flat">
+                            <i class="small material-icons">sync</i>
+                        </button>
+                    </a>
                     <button class="waves-effect waves-grey btn-flat">
-                        <i class="small material-icons">sync</i>
+                        <i class="small material-icons">favorite</i>
                     </button>
-                </a>
-                <button class="waves-effect waves-grey btn-flat">
-                    <i class="small material-icons">favorite</i>
-                </button>
+                </div>
             </li>
             <% }) %>
         </ul>
@@ -50,9 +65,67 @@
 
     <div id="rightBody" class="col s4">
         <input type="text" placeholder="Search Twitter">
-        <p id=trendingHeader><strong>Trends for you</strong> 
+        <h5 id=trendingHeaders><strong>Trends for you</strong>
             <i class="small material-icons">trending_up</i>
-        </p>
+        </h5>
+        <div class="trendingList" id="trendingOne">
+            <span>Culture: Trending</span><br>
+            <a href="">Beeple NFT becomes most expensive ever sold at auction after fetching over $60 million</a>
+        </div><br>
+        <div class="trendingList" id="trendingTwo">
+            <span>COVID-19: LIVE</span><br>
+            <a href="">#COVID-19</a>
+        </div><br>
+        <div class="trendingList" id="trendingThree">
+            <span>Sports: Trending</span><br>
+            <a href="">LeBron James rookie card sells for record $5.2 million</a><br>
+            <span>15.4K Tweets</span>
+        </div><br>
+        <div class="trendingList" id="trendingFour">
+            <a href="">#WannaGetAway</a><br>
+            <span>Look a low far and get away.</span>
+            <span>Promoted by Southwest Airlines</span>
+        </div><br>
+        <div class="trendingList" id="trendingFive">
+            <a href="">#DOGE</a>
+        </div>
+        <h4 id=trendingHeaders><strong>Who to follow</strong></h4>
+        <div class="followList">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Who to Follow</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="">Elon Musk</a></td>
+                        <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Google</a></td>
+                        <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="">General Assembly</a></td>
+                        <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <a href="">Show more</a>
+            </div>
+        </div>
+        <div class="legalFooter">
+            <a href="">Terms of Service</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookie Policy</a>
+            <a href="">Ads info</a>
+            <a href="">More</a>
+            <span>© 2021 Twitter, Inc.</span> </div>
     </div>
 </div>
 
