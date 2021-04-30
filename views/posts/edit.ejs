@@ -1,97 +1,112 @@
 <%- include('../partials/header') %>
 
 <div class="row container">
-  <div id="leftBody" class="col s2">
-    <div class="container">
-      <div class="navbar-fixed">
-        <div class="navbar-fixed">
-          <a class="asideBtn left" href="/posts"><i class="small material-icons">home</i></a>
-          <a class="asideBtn left" href="/explore"><i class="small material-icons">explore</i></a>
-          <a class="asideBtn left" href="/notifications"><i class="small material-icons">notifications_none</i></a>
-          <a class="asideBtn left" href="/messages"><i class="small material-icons">message</i></a>
-          <a class="asideBtn left" href="/profile"><i class="small material-icons">account_circle</i></a>
-          <a class="asideBtn left" href="/bookmarks"><i class="small material-icons">bookmark_border</i></a>
-          <a class="asideBtn left" href="/more"><i class="small material-icons">more</i></a>
-      </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col s6">
-    <h5 id="homeHeader"><strong>Update</strong></h5>
-    <form action="/posts/<%= postId %>?_method=PUT" method="POST">
-      <textarea name="text" placeholder="<%= post.text %>"></textarea>
-      <a class="asideBtn left" href="/image"><i class="small material-icons">image</i></a>
-      <a class="asideBtn left" href="/gif"><i class="small material-icons">gif</i></a>
-      <a class="asideBtn left" href="/chart"><i class="small material-icons">insert_chart</i></a>
-      <button class="right waves-effect waves-light blue lighten-2 btn" type="sumbit">Tweet</button>
-
-    </form>
-  </div>
-
-  <div id="rightBody" class="col s4">
-    <input type="text" placeholder="Search Twitter">
-    <h5 id=trendingHeaders><strong>Trends for you</strong>
-        <i class="small material-icons">trending_up</i>
-    </h5>
-    <div class="trendingList" id="trendingOne">
-        <span>Culture: Trending</span><br>
-        <a href="">Beeple NFT becomes most expensive ever sold at auction after fetching over $60 million</a>
-    </div><br>
-    <div class="trendingList" id="trendingTwo">
-        <span>COVID-19: LIVE</span><br>
-        <a href="">#COVID-19</a>
-    </div><br>
-    <div class="trendingList" id="trendingThree">
-        <span>Sports: Trending</span><br>
-        <a href="">LeBron James rookie card sells for record $5.2 million</a><br>
-        <span>15.4K Tweets</span>
-    </div><br>
-    <div class="trendingList" id="trendingFour">
-        <a href="">#WannaGetAway</a><br>
-        <span>Look a low far and get away.</span>
-        <span>Promoted by Southwest Airlines</span>
-    </div><br>
-    <div class="trendingList" id="trendingFive">
-        <a href="">#DOGE</a>
-    </div>
-    <h4 id=trendingHeaders><strong>Who to follow</strong></h4>
-    <div class="followList">
-        <table>
-            <thead>
-                <tr>
-                    <th> </th>
-                    <th> </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="">Elon Musk</a></td>
-                    <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a></td>
-                </tr>
-                <tr>
-                    <td><a href="">Google</a></td>
-                    <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="">General Assembly</a></td>
-                    <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div>
-            <a href="">Show more</a>
+    <div id="leftBody" class="col s2">
+        <div class="container">
+            <div class="navbar-fixed">
+                <div class="navbar-fixed">
+                    <a class="asideBtn left" href="/posts"><i class="small material-icons">home</i></a>
+                    <a class="asideBtn left" href="/explore"><i class="small material-icons">explore</i></a>
+                    <a class="asideBtn left" href="/notifications"><i
+                            class="small material-icons">notifications_none</i></a>
+                    <a class="asideBtn left" href="/messages"><i class="small material-icons">message</i></a>
+                    <a class="asideBtn left" href="/profile"><i class="small material-icons">account_circle</i></a>
+                    <a class="asideBtn left" href="/bookmarks"><i class="small material-icons">bookmark_border</i></a>
+                    <a class="asideBtn left" href="/more"><i class="small material-icons">more</i></a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="legalFooter">
-        <a href="">Terms of Service</a>
-        <a href="">Privacy Policy</a>
-        <a href="">Cookie Policy</a>
-        <a href="">Ads info</a>
-        <a href="">More</a>
-        <span>© 2021 Twitter, Inc.</span> </div>
-</div>
+
+    <div class="col s6">
+        <div class="textareaBody">
+            <h5 id="homeHeader"><strong>Update</strong></h5>
+            <form action="/posts/<%= postId %>?_method=PUT" method="POST">
+                <textarea name="text" placeholder="<%= post.text %>"></textarea>
+                <a class="asideBtn left" href="/image"><i class="small material-icons">image</i></a>
+                <a class="asideBtn left" href="/gif"><i class="small material-icons">gif</i></a>
+                <a class="asideBtn left" href="/chart"><i class="small material-icons">insert_chart</i></a>
+                <button class="right waves-effect waves-light blue lighten-2 btn" type="sumbit">Tweet</button>
+            </form><br><br>
+        </div>
+    </div>
+
+    <div id="rightBody" class="col s4">
+        <input type="text" placeholder="Search Twitter">
+        <h5 id=trendingHeaders><strong>Trends for you</strong>
+            <i class="small material-icons">trending_up</i>
+        </h5>
+        <div class="trendingList">
+            <div class="trendingItem" id="trendingOne">
+                <span class="trendHeader">Breaking News: Cryptocurrency</span><br>
+                <a href="">#DOGE</a>
+                <span></span><br>
+                <span>Elon Musk calls himself the "Dogefather" Dogecoin up 51%</span><br>
+                <span class="trendHeader">3.2m Tweets</span><br>
+            </div>
+            <div class="trendingItem" id="trendingTwo">
+                <span class="trendHeader">Culture: Trending</span><br>
+                <a href="">Beeple NFT becomes most expensive ever sold at auction after fetching over $60 million</a>
+            </div>
+            <div class="trendingItem" id="trendingThree">
+                <span class="trendHeader">COVID-19: LIVE</span><br>
+                <a href="">India Covid-19: Deadly second wave spreads from cities to small towns</a>
+            </div>
+            <div class="trendingItem" id="trendingFour">
+                <span class="trendHeader">Sports: Trending</span><br>
+                <a href="">LeBron James rookie card sells for record $5.2 million</a><br>
+                <span class="trendHeader">15.4K Tweets</span>
+            </div>
+            <div class="trendingItem" id="trendingFive">
+                <a href="">#WannaGetAway</a><br>
+                <span>Look a low far and get away.</span>
+                <span>Promoted by Southwest Airlines</span><br>
+                <span class="trendHeader">Ad</span><br>
+            </div>
+        </div>
+        <h4 id=trendingHeaders><strong>Who to follow</strong></h4>
+        <div class="followList">
+            <table>
+                <thead>
+                    <tr>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img class="userAvatar"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/1200px-Joe_Biden_presidential_portrait.jpg"
+                                alt=""><a href="">Joe Biden</a></td>
+                        <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a></td>
+                    </tr>
+                    <tr>
+                        <td><img class="userAvatar"
+                                src="https://upload.wikimedia.org/wikipedia/en/a/a2/National_Football_League_logo.svg"
+                                alt=""><a href="">NFL</a></td>
+                        <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="userAvatar"
+                                src="https://i.pinimg.com/originals/5e/af/20/5eaf20e1a08c73f59d40ab3ba5bffaae.png"
+                                alt=""><a href="">The New York Times</a></td>
+                        <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <a href="">Show more</a>
+            </div>
+        </div>
+        <div class="legalFooter">
+            <a href="">Terms of Service</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookie Policy</a>
+            <a href="">Ads info</a>
+            <a href="">More</a>
+            <span>© 2021 Twitter, Inc.</span> </div>
+    </div>
 </div>
 <%- include('../partials/footer') %>
