@@ -13,8 +13,8 @@ A blogging and social network app that allows users to post and interact with me
 - Materialize CSS
 
 ## Screenshots
-![screenshot](./imgs/screenshot-1.png)
-![screenshot](./imgs/screenshot-2.png)
+![wireframe](./imgs/screenshot-1.png)
+![wireframe](./imgs/screenshot-2.png)
 
 ## Wireframes
 ![wireframe](./public/imgs/Project-Bandit-wireframe.png)
