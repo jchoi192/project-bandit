@@ -33,9 +33,7 @@
             <% posts.forEach( (post) => { %>
             <li>
                 <div>
-                    <a href=""><i class="small material-icons">sentiment_very_satisfied</i></a>
-                </div>
-                <div id="userPost">
+                    <a href=""><i id="userAvatar" class="small material-icons">sentiment_very_satisfied</i></a>
                     <span>
                         <%= post.text %>
                     </span>
@@ -114,20 +112,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img class="userAvatar"
+                        <td><img class="followAvatar"
                                 src="https://pbs.twimg.com/profile_images/1383184766959120385/MM9DHPWC_400x400.jpg"
                                 alt=""><a href="https://twitter.com/elonmusk">Elon Musk</a></td>
                         <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a></td>
                     </tr>
                     <tr>
-                        <td><img class="userAvatar"
+                        <td><img class="followAvatar"
                                 src="https://pbs.twimg.com/profile_images/1343584679664873479/Xos3xQfk_400x400.jpg"
                                 alt=""><a href="https://twitter.com/Google">Google</a></td>
                         <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a>
                         </td>
                     </tr>
                     <tr>
-                        <td><img class="userAvatar"
+                        <td><img class="followAvatar"
                                 src="https://pbs.twimg.com/profile_images/1318271172216324097/O7Xaryg2_400x400.jpg"
                                 alt=""><a href="https://twitter.com/GA">General Assembly</a></td>
                         <td><a class="waves-effect waves-light blue lighten-2 btn" href="">Follow</a></td>
