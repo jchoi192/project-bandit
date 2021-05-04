@@ -6,17 +6,6 @@ const postSchema = new mongoose.Schema({
   }, {
     timestamps: true
   });
-  
-//   const userSchema = new mongoose.Schema({
-//     name: String,
-//     avatarURL: String,
-//     googleId: String,
-//     posts: [postSchema],
-//   }, {
-//     timestamps: true
-//   });
-
-// module.exports = mongoose.model('User', userSchema)
 
 module.exports = mongoose.model('Tweet', postSchema)
 

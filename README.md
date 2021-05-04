@@ -24,7 +24,7 @@ A blogging and social network app that allows users to post and interact with me
 ![wireframe](./public/imgs/Tweeter-ERD.png)
 
 ## Getting Started
-[Click Here](tweeter-alita.herokuapp.com) to get started
+[Click Here](https://tweeter-alita.herokuapp.com/posts) to get started
 
 ## Future Enhancements
 - Allow users to signup/login to an account using OAuth
