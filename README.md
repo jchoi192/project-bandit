@@ -1,20 +1,32 @@
-# Project Bandit
+# Tweeter
 
-A blogging and social network app that allows users to anonymously post messages. Registered users can post and like posts and update their own posts.
+A blogging and social network app that allows users to post and interact with messages.
 
 ## Technologies
-- CSS3
-- Node
-- Express
+- Node.js
+- Express.js
+- MongoDB
 - Mongoose
+- HTML
+- CSS
+- Javascript
+- Materialize CSS
+
+## Screenshots
+![screenshot](./imgs/screenshot-1.png)
+![screenshot](./imgs/screenshot-2.png)
 
 ## Wireframes
 ![wireframe](./imgs/Project-Bandit-wireframe.png)
 ![wireframe](./imgs/Project-Bandit-wireframe-2.png)
 
+## ERDs
+![wireframe][./imgs/Tweeter-ERD.png]
+
 ## Getting Started
-[Click Here](https://github.com/jchoi192/project-bandit) to get started
+[Click Here](tweeter-alita.herokuapp.com) to get started
 
 ## Future Enhancements
-- Allow users to signup/login to an account
-- Allow the Trending aside to display actual hashtags that are trending within the app
+- Allow users to signup/login to an account using OAuth
+- Allow the Trending column to display live and trending news
+- Allow registered users can post and like posts and update their own posts.
