@@ -17,11 +17,11 @@ A blogging and social network app that allows users to post and interact with me
 ![screenshot](./imgs/screenshot-2.png)
 
 ## Wireframes
-![wireframe](./imgs/Project-Bandit-wireframe.png)
-![wireframe](./imgs/Project-Bandit-wireframe-2.png)
+![wireframe](./public/imgs/Project-Bandit-wireframe.png)
+![wireframe](./public/imgs/Project-Bandit-wireframe-2.png)
 
 ## ERDs
-![wireframe][./imgs/Tweeter-ERD.png]
+![wireframe](./public/imgs/Tweeter-ERD.png)
 
 ## Getting Started
 [Click Here](tweeter-alita.herokuapp.com) to get started
